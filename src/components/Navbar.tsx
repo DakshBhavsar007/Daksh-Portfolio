@@ -4,6 +4,7 @@ import { portfolioConfig } from '../data/portfolioData';
 import { ResumeDropdown } from './ResumeDropdown';
 import { resumesData } from '../data/resumeData';
 import { openPrintableResume } from '../utils/resumeGenerator';
+import { BrandOrb } from './BrandOrb';
 
 interface NavbarProps {
   onOpenContact: () => void;
@@ -72,11 +73,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenResume }) =
           className="group flex items-center gap-2.5 cursor-pointer focus:outline-none"
           id="nav-logo"
         >
-          <div className="w-8 h-8 rounded-full bg-[#111111] text-white flex items-center justify-center font-bold text-[11px] tracking-tighter transition-transform group-hover:scale-105">
-            <span>DB</span>
+          <div className="w-8 h-8 rounded-full bg-[#111111] text-white flex items-center justify-center font-bold text-[11px] tracking-tighter transition-transform group-hover:scale-105 overflow-hidden relative shadow-xs">
+            <BrandOrb mode="gemini" size={26} isDark={true} className="absolute inset-0 m-auto opacity-90" />
+            <span className="relative z-10 text-[9px] font-black tracking-tighter mix-blend-difference">DB</span>
           </div>
-          <span className="font-semibold text-sm tracking-tighter uppercase text-[#111111] group-hover:opacity-80 transition-opacity">
+          <span className="font-semibold text-sm tracking-tighter uppercase text-[#111111] group-hover:opacity-80 transition-opacity flex items-center gap-1.5">
             {portfolioConfig.personal.name}
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
           </span>
         </a>
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { portfolioConfig } from '../data/portfolioData';
-import { ChevronsRight, Send, CheckCircle2, Mail, Phone, MapPin, ArrowUpRight, Github, Linkedin, Twitter, Dribbble, Instagram } from 'lucide-react';
+import { ChevronsRight, Send, CheckCircle2, Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import { BrandOrb } from './BrandOrb';
 
 interface ContactCTAProps {
   onOpenQuickHire: () => void;
@@ -256,9 +257,12 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
 
               {/* Email Address */}
               <div className="interactive-stat cursor-default group">
-                <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] block mb-2 group-hover:text-white transition-colors">
-                  Email Address
-                </span>
+                <div className="flex items-center gap-2 mb-2">
+                  <BrandOrb mode="email" size={20} isDark={true} />
+                  <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] group-hover:text-white transition-colors">
+                    Email Address
+                  </span>
+                </div>
                 <a
                   href={`mailto:${portfolioConfig.contact.email}`}
                   className="text-[13.5px] text-[#CCCCCC] hover:text-white transition-colors block mb-1 underline-offset-4 hover:underline"
@@ -359,29 +363,29 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                     href={portfolioConfig.contact.socials.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer"
+                    className="p-1.5 sm:p-2 rounded-full bg-[#1F1F1F] hover:bg-white hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer group"
                     aria-label="Daksh Bhavsar on GitHub"
                     title="GitHub Profile"
                   >
-                    <Github className="w-4 h-4" />
+                    <BrandOrb mode="github" size={24} isDark={true} />
                   </a>
                   <a
                     href={portfolioConfig.contact.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer"
+                    className="p-1.5 sm:p-2 rounded-full bg-[#1F1F1F] hover:bg-white hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer group"
                     aria-label="Daksh Bhavsar on LinkedIn"
                     title="LinkedIn Profile"
                   >
-                    <Linkedin className="w-4 h-4" />
+                    <BrandOrb mode="linkedin" size={24} isDark={true} />
                   </a>
                   <a
                     href={`mailto:${portfolioConfig.contact.email}`}
-                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer"
+                    className="p-1.5 sm:p-2 rounded-full bg-[#1F1F1F] hover:bg-white hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer group"
                     aria-label={`Email ${portfolioConfig.contact.email}`}
                     title="Send Email"
                   >
-                    <Mail className="w-4 h-4" />
+                    <BrandOrb mode="email" size={24} isDark={true} />
                   </a>
                   <a
                     href={`tel:${portfolioConfig.contact.phone}`}

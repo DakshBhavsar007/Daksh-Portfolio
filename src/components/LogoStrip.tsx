@@ -1,28 +1,51 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { clientLogos } from '../data/portfolioData';
+import { ArrowRight, Sparkles } from 'lucide-react';
+import { BrandOrb } from './BrandOrb';
+
+interface TechItem {
+  name: string;
+  mode: string;
+  concept: string;
+}
+
+const coreEcosystemOrbs: TechItem[] = [
+  { name: "Gemini AI", mode: "gemini", concept: "LLM Orchestration" },
+  { name: "React 19", mode: "react", concept: "Frontend Architecture" },
+  { name: "Claude API", mode: "claude", concept: "AI Fallback" },
+  { name: "OpenAI", mode: "openai", concept: "Reasoning Systems" },
+  { name: "GitHub", mode: "github", concept: "CI/CD & DevOps" },
+  { name: "LinkedIn", mode: "linkedin", concept: "Network & Reach" }
+];
 
 export const LogoStrip: React.FC = () => {
   return (
-    <section className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-6 sm:py-8 border-y border-[#E5E5E5]">
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <section className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-6 sm:py-7 border-y border-[#E5E5E5] bg-[#FAF9F5]">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
         
-        {/* Left: Section label & Brand logos */}
-        <div className="flex flex-wrap items-center gap-6 sm:gap-10">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#8A8A8A]">
-            Core Ecosystem
-          </span>
+        {/* Left: Section label & Live Animated Brand Orbs */}
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6 w-full lg:w-auto">
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white border border-[#E5E5E5] shrink-0 shadow-2xs">
+            <Sparkles className="w-3 h-3 text-[#111111]" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#111111]">
+              Core Tech Orbs
+            </span>
+          </div>
           
-          <div className="flex flex-wrap items-center gap-6 sm:gap-8">
-            {clientLogos.map((client, index) => (
-              <span
-                key={`${client.name}-${index}`}
-                className={`text-sm sm:text-base font-bold tracking-tighter uppercase text-[#111111] opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-default select-none ${
-                  index % 2 === 0 ? 'italic font-serif' : 'font-sans'
-                }`}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            {coreEcosystemOrbs.map((tech) => (
+              <div
+                key={tech.name}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#E5E5E5] hover:border-[#111111] hover:shadow-xs transition-all duration-300 group cursor-default select-none shadow-2xs"
+                title={`${tech.name} — ${tech.concept}`}
               >
-                {client.name}
-              </span>
+                <BrandOrb mode={tech.mode} size={22} />
+                <span className="text-xs font-bold text-[#111111] tracking-tight group-hover:text-black">
+                  {tech.name}
+                </span>
+                <span className="hidden sm:inline text-[9px] font-medium text-[#777777] uppercase tracking-wider bg-[#F5F5F3] px-1.5 py-0.2 rounded-full">
+                  {tech.concept}
+                </span>
+              </div>
             ))}
           </div>
         </div>
@@ -35,7 +58,7 @@ export const LogoStrip: React.FC = () => {
             const el = document.getElementById('projects') || document.getElementById('portfolio');
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="group flex flex-col items-start md:items-end cursor-pointer pt-2 md:pt-0"
+          className="group flex flex-col items-start lg:items-end cursor-pointer shrink-0 pt-1 lg:pt-0"
         >
           <span className="text-[9px] font-bold uppercase tracking-widest text-[#8A8A8A] group-hover:text-[#111111] transition-colors">
             Featured Platform
@@ -50,3 +73,4 @@ export const LogoStrip: React.FC = () => {
     </section>
   );
 };
+

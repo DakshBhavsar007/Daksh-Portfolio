@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowDownRight, ArrowUpRight, Camera, RefreshCw } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Camera, RefreshCw, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { portfolioConfig, roles } from '../data/portfolioData';
+import { BrandOrb } from './BrandOrb';
 
 interface HeroProps {
   onExploreWork: () => void;
@@ -108,18 +109,22 @@ export const Hero: React.FC<HeroProps> = ({ onExploreWork, onOpenContact }) => {
 
             {/* Action Tags & CTA Pills */}
             <div className="flex-1 flex flex-col gap-4">
-              <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-1.5 bg-[#F5F5F3] border border-[#E5E5E5]/60 rounded-full text-[10px] font-bold uppercase tracking-wider text-[#666666] interactive-pill cursor-default hover:text-[#111111] hover:bg-[#EAEAEA]">
-                  Python & Django
+              <div className="flex flex-wrap gap-2 items-center">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#FAF9F5] border border-[#E5E5E5] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#111111] interactive-pill cursor-default hover:border-[#111111] hover:bg-white transition-all shadow-2xs">
+                  <BrandOrb mode="gemini" size={16} />
+                  <span>AI & LLM Pipelines</span>
                 </span>
-                <span className="px-4 py-1.5 bg-[#F5F5F3] border border-[#E5E5E5]/60 rounded-full text-[10px] font-bold uppercase tracking-wider text-[#666666] interactive-pill cursor-default hover:text-[#111111] hover:bg-[#EAEAEA]">
-                  FastAPI & Flask
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#FAF9F5] border border-[#E5E5E5] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#111111] interactive-pill cursor-default hover:border-[#111111] hover:bg-white transition-all shadow-2xs">
+                  <BrandOrb mode="react" size={16} />
+                  <span>React & Modern Web</span>
                 </span>
-                <span className="px-4 py-1.5 bg-[#F5F5F3] border border-[#E5E5E5]/60 rounded-full text-[10px] font-bold uppercase tracking-wider text-[#666666] interactive-pill cursor-default hover:text-[#111111] hover:bg-[#EAEAEA]">
-                  React & Node.js
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#FAF9F5] border border-[#E5E5E5] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#111111] interactive-pill cursor-default hover:border-[#111111] hover:bg-white transition-all shadow-2xs">
+                  <BrandOrb mode="claude" size={16} />
+                  <span>Multi-Provider Fallback</span>
                 </span>
-                <span className="px-4 py-1.5 bg-[#F5F5F3] border border-[#E5E5E5]/60 rounded-full text-[10px] font-bold uppercase tracking-wider text-[#666666] interactive-pill cursor-default hover:text-[#111111] hover:bg-[#EAEAEA]">
-                  AI & LLM Systems
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#FAF9F5] border border-[#E5E5E5] rounded-full text-[10px] font-bold uppercase tracking-wider text-[#111111] interactive-pill cursor-default hover:border-[#111111] hover:bg-white transition-all shadow-2xs">
+                  <BrandOrb mode="github" size={16} />
+                  <span>Docker & CI/CD</span>
                 </span>
               </div>
 
@@ -160,28 +165,31 @@ export const Hero: React.FC<HeroProps> = ({ onExploreWork, onOpenContact }) => {
 
             <div
               onClick={() => fileInputRef.current?.click()}
-              className="aspect-[3/4] bg-[#0E0E0E] rounded-2xl overflow-hidden border border-[#2A2A2A] shadow-[0_16px_40px_rgba(0,0,0,0.12)] relative cursor-pointer group"
+              className="aspect-[3/4] bg-[#0A0A0C] rounded-2xl overflow-hidden border border-[#222226] shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative cursor-pointer group"
               title="Click to update or swap portrait image"
             >
+              {/* Cinematic Red Rim Glow in Background */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-red-600/35 via-transparent to-red-900/25 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none -z-10"></div>
+
+              {/* Portrait Photo with Grayscale-to-Color Real Image Hover Effect */}
               <img
                 src={heroImage}
-                alt="Daksh Bhavsar - Full-Stack Developer | AI Enthusiast"
-                className="w-full h-full object-cover grayscale contrast-110 group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105"
+                alt="Daksh Bhavsar - Full-Stack Developer | AI Systems"
+                className="w-full h-full object-cover grayscale contrast-125 brightness-90 opacity-90 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
                 loading="eager"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  // Fallback if local image not found yet
                   (e.currentTarget as HTMLImageElement).src =
-                    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop';
+                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop';
                 }}
               />
 
-              {/* Subtle hover gradient depth */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+              {/* Atmospheric Subtle Vignette Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-red-950/10 opacity-60 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"></div>
 
               {/* Top-Right Change Photo Floating Action Pill */}
               <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-1 group-hover:translate-y-0 z-20">
-                <div className="px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-lg hover:bg-black/90">
+                <div className="px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-white text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-lg hover:bg-black">
                   <Camera className="w-3.5 h-3.5" />
                   <span>Update Photo</span>
                 </div>
