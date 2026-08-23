@@ -17,7 +17,7 @@ export const LogoStrip: React.FC = () => {
             {clientLogos.map((client, index) => (
               <span
                 key={`${client.name}-${index}`}
-                className={`text-sm sm:text-base font-bold tracking-tighter uppercase text-[#111111] opacity-70 hover:opacity-100 transition-opacity cursor-default select-none ${
+                className={`text-sm sm:text-base font-bold tracking-tighter uppercase text-[#111111] opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300 cursor-default select-none ${
                   index % 2 === 0 ? 'italic font-serif' : 'font-sans'
                 }`}
               >
@@ -37,12 +37,12 @@ export const LogoStrip: React.FC = () => {
           }}
           className="group flex flex-col items-start md:items-end cursor-pointer pt-2 md:pt-0"
         >
-          <span className="text-[9px] font-bold uppercase tracking-widest text-[#8A8A8A]">
+          <span className="text-[9px] font-bold uppercase tracking-widest text-[#8A8A8A] group-hover:text-[#111111] transition-colors">
             Featured Platform
           </span>
-          <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#111111] group-hover:underline">
-            <span>Between AI Platform</span>
-            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+          <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#111111] group-hover:translate-x-0.5 transition-transform">
+            <span className="group-hover:underline underline-offset-4">Between AI Platform</span>
+            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1.5" />
           </div>
         </a>
 

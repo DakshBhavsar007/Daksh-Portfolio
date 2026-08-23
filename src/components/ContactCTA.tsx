@@ -86,25 +86,25 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
       <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Top Header Row with Giant Typography & CTA Button */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-16 sm:pb-24 border-b border-[#222222]">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 pb-16 sm:pb-24 border-b border-[#222222] group">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[#8A8A8A] block mb-4">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[#8A8A8A] block mb-4 interactive-pill px-2.5 py-1 rounded-full bg-[#1A1A1A] border border-[#333333] w-fit cursor-default">
               Direct Collaboration / Inquiries
             </span>
-            <h2 className="text-[52px] sm:text-[76px] lg:text-[100px] font-light tracking-tighter uppercase leading-[0.9] text-white">
+            <h2 className="text-[52px] sm:text-[76px] lg:text-[100px] font-light tracking-tighter uppercase leading-[0.9] text-white interactive-heading cursor-default">
               Let's Connect <br />
-              <span className="font-serif italic lowercase font-normal text-[#8A8A8A]">together</span>
+              <span className="font-serif italic lowercase font-normal text-[#8A8A8A] group-hover:text-white transition-colors duration-500 inline-block group-hover:translate-x-2">together</span>
             </h2>
           </div>
 
           <div>
             <button
               onClick={onOpenQuickHire}
-              className="px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-white text-[#111111] hover:bg-[#EAEAEA] text-[12px] font-bold uppercase tracking-widest transition-all duration-300 flex items-center gap-3 group cursor-pointer shadow-xl active:scale-95"
+              className="px-8 sm:px-10 py-4 sm:py-5 rounded-full bg-white text-[#111111] hover:bg-[#EAEAEA] hover:scale-105 hover:shadow-2xl text-[12px] font-bold uppercase tracking-widest transition-all duration-300 flex items-center gap-3 group cursor-pointer shadow-xl active:scale-95"
               id="contact-hire-now-btn"
             >
               <div className="w-7 h-7 rounded-full bg-[#111111] text-white flex items-center justify-center transition-colors">
-                <ChevronsRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                <ChevronsRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
               </div>
               <span>Hire Me Now</span>
             </button>
@@ -115,9 +115,9 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 py-16 sm:py-20 border-b border-[#222222]">
           
           {/* Left Column: Direct Inquiry Form */}
-          <div className="lg:col-span-6 bg-[#161616] p-8 sm:p-10 rounded-2xl border border-[#262626]">
+          <div className="lg:col-span-6 bg-[#161616] p-8 sm:p-10 rounded-2xl border border-[#262626] transition-all duration-500 hover:border-[#383838] hover:shadow-2xl interactive-card">
             <h3 className="text-[20px] font-bold text-white mb-2 uppercase tracking-tight">Direct Message</h3>
-            <p className="text-[13.5px] text-[#8A8A8A] mb-6 font-normal">
+            <p className="text-[13.5px] text-[#8A8A8A] mb-6 font-normal hover:text-[#CCCCCC] transition-colors">
               Have an upcoming product launch or design sprint? Let's discuss scope and timeline.
             </p>
 
@@ -245,18 +245,18 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               
               {/* Address */}
-              <div>
-                <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] block mb-2">
+              <div className="interactive-stat cursor-default group">
+                <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] block mb-2 group-hover:text-white transition-colors">
                   Address
                 </span>
-                <p className="text-[13.5px] leading-relaxed text-[#CCCCCC]">
+                <p className="text-[13.5px] leading-relaxed text-[#CCCCCC] group-hover:text-white transition-colors">
                   {portfolioConfig.contact.address}
                 </p>
               </div>
 
               {/* Email Address */}
-              <div>
-                <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] block mb-2">
+              <div className="interactive-stat cursor-default group">
+                <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] block mb-2 group-hover:text-white transition-colors">
                   Email Address
                 </span>
                 <a
@@ -274,8 +274,8 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
               </div>
 
               {/* Phone Number */}
-              <div>
-                <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] block mb-2">
+              <div className="interactive-stat cursor-default group">
+                <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A] block mb-2 group-hover:text-white transition-colors">
                   Phone Number
                 </span>
                 <a
@@ -305,7 +305,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                       const el = document.getElementById('about');
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="hover:text-white transition-colors cursor-pointer"
+                    className="hover:text-white transition-colors cursor-pointer hover:underline underline-offset-4"
                   >
                     About
                   </a>
@@ -316,7 +316,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                       const el = document.getElementById('skills') || document.getElementById('services');
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="hover:text-white transition-colors cursor-pointer"
+                    className="hover:text-white transition-colors cursor-pointer hover:underline underline-offset-4"
                   >
                     Skills
                   </a>
@@ -327,7 +327,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                       const el = document.getElementById('projects') || document.getElementById('portfolio');
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="hover:text-white transition-colors cursor-pointer"
+                    className="hover:text-white transition-colors cursor-pointer hover:underline underline-offset-4"
                   >
                     Projects
                   </a>
@@ -338,7 +338,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                       const el = document.getElementById('journey') || document.getElementById('experience');
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="hover:text-white transition-colors cursor-pointer"
+                    className="hover:text-white transition-colors cursor-pointer hover:underline underline-offset-4"
                   >
                     Journey
                   </a>
@@ -349,7 +349,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                       const el = document.getElementById('contact');
                       if (el) el.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="hover:text-white transition-colors cursor-pointer"
+                    className="hover:text-white transition-colors cursor-pointer hover:underline underline-offset-4"
                   >
                     Contact
                   </a>
@@ -359,7 +359,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                     href={portfolioConfig.contact.socials.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] transition-colors flex items-center justify-center cursor-pointer"
+                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer"
                     aria-label="Daksh Bhavsar on GitHub"
                     title="GitHub Profile"
                   >
@@ -369,7 +369,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                     href={portfolioConfig.contact.socials.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] transition-colors flex items-center justify-center cursor-pointer"
+                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer"
                     aria-label="Daksh Bhavsar on LinkedIn"
                     title="LinkedIn Profile"
                   >
@@ -377,7 +377,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                   </a>
                   <a
                     href={`mailto:${portfolioConfig.contact.email}`}
-                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] transition-colors flex items-center justify-center cursor-pointer"
+                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer"
                     aria-label={`Email ${portfolioConfig.contact.email}`}
                     title="Send Email"
                   >
@@ -385,7 +385,7 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
                   </a>
                   <a
                     href={`tel:${portfolioConfig.contact.phone}`}
-                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] transition-colors flex items-center justify-center cursor-pointer"
+                    className="p-2.5 rounded-full bg-[#1F1F1F] text-[#CCCCCC] hover:bg-white hover:text-[#111111] hover:scale-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer"
                     aria-label={`Call ${portfolioConfig.contact.phone}`}
                     title="Call Phone"
                   >
@@ -400,13 +400,13 @@ export const ContactCTA: React.FC<ContactCTAProps> = ({ onOpenQuickHire }) => {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-[#666666]">
-          <div className="flex items-center gap-2">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-[#8A8A8A]">
+          <div className="flex items-center gap-2 group cursor-default">
             <span className="font-bold text-white tracking-tight text-sm">✦ {portfolioConfig.personal.name}</span>
             <span className="text-[#444444]">|</span>
-            <span>{portfolioConfig.personal.title}</span>
+            <span className="text-[#8A8A8A] group-hover:text-white transition-colors">{portfolioConfig.personal.title}</span>
           </div>
-          <div>
+          <div className="text-[#888888] hover:text-[#CCCCCC] transition-colors cursor-default">
             <span>All rights reserved @{portfolioConfig.personal.name} © 2026</span>
           </div>
         </div>

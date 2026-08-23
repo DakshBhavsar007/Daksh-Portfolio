@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="spaceBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020408"/>
+      <stop offset="35%" stop-color="#040B18"/>
+      <stop offset="70%" stop-color="#071329"/>
+      <stop offset="100%" stop-color="#0A1C3B"/>
+    </linearGradient>
+    <radialGradient id="earthGlow" cx="50%" cy="100%" r="70%">
+      <stop offset="0%" stop-color="#FFB347" stop-opacity="0.75"/>
+      <stop offset="25%" stop-color="#FF7043" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#2196F3" stop-opacity="0.3"/>
+      <stop offset="85%" stop-color="#050C1D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#020408" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="greenBtn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="greenGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Space Background -->
+  <rect width="1200" height="675" fill="url(#spaceBg)"/>
+
+  <!-- Earth Atmosphere & City Lights Curvature -->
+  <ellipse cx="600" cy="780" rx="900" ry="480" fill="url(#earthGlow)"/>
+
+  <!-- Dense Golden Star & City Light Clusters (matching space view) -->
+  <g fill="#FBBF24" opacity="0.8">
+    <circle cx="150" cy="530" r="1.5"/><circle cx="180" cy="510" r="2"/><circle cx="210" cy="540" r="1.5"/><circle cx="240" cy="500" r="2.5"/><circle cx="280" cy="560" r="1.5"/><circle cx="320" cy="520" r="2"/>
+    <circle cx="450" cy="580" r="3"/><circle cx="480" cy="540" r="2"/><circle cx="520" cy="590" r="3"/><circle cx="560" cy="530" r="2"/><circle cx="610" cy="570" r="3.5"/><circle cx="660" cy="520" r="2"/>
+    <circle cx="730" cy="580" r="2.5"/><circle cx="780" cy="540" r="3"/><circle cx="830" cy="560" r="2"/><circle cx="890" cy="520" r="2"/><circle cx="940" cy="550" r="3"/><circle cx="990" cy="530" r="1.5"/>
+    <circle cx="380" cy="620" r="3"/><circle cx="510" cy="630" r="4"/><circle cx="680" cy="640" r="3.5"/><circle cx="840" cy="610" r="3"/>
+  </g>
+  <g fill="#FDE047" opacity="0.6">
+    <circle cx="200" cy="520" r="1"/><circle cx="350" cy="540" r="1.5"/><circle cx="590" cy="550" r="2"/><circle cx="750" cy="560" r="1.5"/><circle cx="900" cy="530" r="1"/>
+  </g>
+
+  <!-- Stars in upper space -->
+  <g fill="#FFFFFF" opacity="0.7">
+    <circle cx="80" cy="120" r="1"/><circle cx="180" cy="80" r="1.5"/><circle cx="310" cy="140" r="1"/><circle cx="480" cy="90" r="1.5"/>
+    <circle cx="720" cy="110" r="1"/><circle cx="890" cy="70" r="1.5"/><circle cx="1020" cy="130" r="1"/><circle cx="1140" cy="90" r="1.5"/>
+  </g>
+
+  <!-- Top Navbar -->
+  <g id="studyNav">
+    <rect width="1200" height="70" fill="#030712" fill-opacity="0.8" stroke="#1F2937" stroke-width="1"/>
+
+    <!-- StudyVerse Logo -->
+    <g transform="translate(50, 20)">
+      <!-- Green Graduation Cap -->
+      <path d="M 5,16 L 18,9 L 31,16 L 18,23 Z" fill="#10B981"/>
+      <path d="M 11,20 L 11,26 C 11,28 14,30 18,30 C 22,30 25,28 25,26 L 25,20" fill="none" stroke="#10B981" stroke-width="2"/>
+      <text x="42" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">StudyVerse</text>
+    </g>
+
+    <!-- Nav Menu Right -->
+    <g transform="translate(930, 18)">
+      <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF">Features</text>
+
+      <!-- Get Started Green Button -->
+      <rect x="80" y="0" width="115" height="36" rx="8" fill="url(#greenBtn)"/>
+      <text x="96" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#064E3B">Get Started</text>
+    </g>
+  </g>
+
+  <!-- Hero Content Center -->
+  <g transform="translate(600, 160)" text-anchor="middle">
+    
+    <!-- Big Serif Headline (matching exact screenshot) -->
+    <text x="0" y="70" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+      Your Ultimate <tspan fill="#34D399" filter="url(#greenGlow)">Study</tspan>
+    </text>
+    <text x="0" y="135" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+      <tspan fill="#34D399" filter="url(#greenGlow)">Companion</tspan> Powered
+    </text>
+    <text x="0" y="200" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+      by AI
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#E2E8F0">
+      Transform your learning journey with gamification, AI assistance, Pomodoro focus sessions, quiz
+    </text>
+    <text x="0" y="278" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="400" fill="#E2E8F0">
+      battles, and collaborative study groups. Level up your productivity today!
+    </text>
+
+    <!-- CTA Buttons -->
+    <g transform="translate(0, 325)">
+      <!-- Start Learning Free Button -->
+      <rect x="-195" y="0" width="180" height="46" rx="8" fill="url(#greenBtn)"/>
+      <text x="-105" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="700" fill="#064E3B">🚀 Start Learning Free</text>
+
+      <!-- Explore Features Button -->
+      <rect x="5" y="0" width="175" height="46" rx="8" fill="#0B132B" fill-opacity="0.7" stroke="#374151" stroke-width="1"/>
+      <text x="92" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="600" fill="#FFFFFF">▶ Explore Features</text>
+    </g>
+
+    <!-- 3 Bottom Stats -->
+    <g transform="translate(0, 430)">
+      <!-- Stat 1 -->
+      <g transform="translate(-200, 0)">
+        <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#34D399">8+</text>
+        <text x="0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Powerful Features</text>
+      </g>
+
+      <!-- Stat 2 -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#34D399">AI</text>
+        <text x="0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Powered Assistant</text>
+      </g>
+
+      <!-- Stat 3 -->
+      <g transform="translate(200, 0)">
+        <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" fill="#34D399">24/7</text>
+        <text x="0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#94A3B8">Study Support</text>
+      </g>
+    </g>
+  </g>
+</svg>

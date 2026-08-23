@@ -51,9 +51,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-102"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-top filter contrast-[1.03] transition-all duration-700 ease-out group-hover:scale-103"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/35 to-transparent pointer-events-none"></div>
 
           {/* Title on Hero */}
           <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -67,7 +68,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 </span>
               ))}
             </div>
-            <h2 id="modal-project-title" className="text-[28px] sm:text-[36px] font-bold tracking-tight leading-tight">
+            <h2 id="modal-project-title" className="text-[26px] sm:text-[34px] font-bold tracking-tight leading-tight">
               {project.title}
             </h2>
           </div>

@@ -14,6 +14,7 @@ import { ProjectModal } from './components/ProjectModal';
 import { ServiceModal } from './components/ServiceModal';
 import { VideoModal } from './components/VideoModal';
 import { QuickHireModal } from './components/QuickHireModal';
+import { ResumeModal } from './components/ResumeModal';
 
 import { Project, ServiceItem } from './types';
 import { ArrowUp } from 'lucide-react';
@@ -23,7 +24,14 @@ export default function App() {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isQuickHireOpen, setIsQuickHireOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const [selectedResumeRole, setSelectedResumeRole] = useState<string>('full-stack');
   const [preselectedService, setPreselectedService] = useState<string | undefined>(undefined);
+
+  const handleOpenResume = (roleId?: string) => {
+    if (roleId) setSelectedResumeRole(roleId);
+    setIsResumeOpen(true);
+  };
 
   const handleOpenContact = () => {
     const contactEl = document.getElementById('contact');
@@ -53,6 +61,7 @@ export default function App() {
       {/* Sticky Navigation */}
       <Navbar
         onOpenContact={handleOpenContact}
+        onOpenResume={handleOpenResume}
       />
 
       {/* Main Content Sections */}
@@ -118,6 +127,12 @@ export default function App() {
           setPreselectedService(undefined);
         }}
         preselectedService={preselectedService}
+      />
+
+      <ResumeModal
+        isOpen={isResumeOpen}
+        initialRoleId={selectedResumeRole}
+        onClose={() => setIsResumeOpen(false)}
       />
     </div>
   );

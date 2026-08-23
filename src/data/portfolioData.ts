@@ -14,9 +14,9 @@ export const portfolioConfig = {
     languages: "English (Fluent), Hindi (Native), Gujarati (Native)",
     certifications: "View all certifications — LinkedIn",
     availability: "Available for Roles & Projects",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+    avatar: "/daksh-portrait.png",
     aboutHeroImage: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
-    heroPortrait: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+    heroPortrait: "/daksh-portrait.png",
   },
   roles: [
     "Full-Stack Developer",
@@ -34,11 +34,12 @@ export const portfolioConfig = {
     address: "Ahmedabad, Gujarat, India",
     socials: {
       github: "https://github.com/DakshBhavsar007",
-      linkedin: "https://linkedin.com/in/daksh-bhavsar-96b102339",
+      linkedin: "https://www.linkedin.com/in/daksh-bhavsar-96b102339/",
       twitter: "https://twitter.com",
       dribbble: "https://dribbble.com",
       instagram: "https://instagram.com"
-    }
+    },
+    resumeUrl: "/Daksh_Bhavsar_Resume.pdf"
   }
 };
 
@@ -168,7 +169,7 @@ export const projects: Project[] = [
     tags: ["Django", "React", "Celery", "Gemini API"],
     description: "Built a full-stack AI recruitment platform with automated resume parsing, ATS scoring, and a coding assessment sandbox (Piston) on a Django backend with a React/Vite frontend.",
     longDescription: "Built a full-stack AI recruitment platform with automated resume parsing, ATS scoring, and a coding assessment sandbox (Piston) on a Django backend with a React/Vite frontend. Designed a multi-provider LLM rotation system (Gemini + Groq fallback) using Celery and Redis for async processing; deployed on Render/Vercel with custom DNS and SPF/DMARC email.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/projects/between.svg",
     client: "Between Platform",
     year: "Live",
     role: "Full-Stack Developer & Architect",
@@ -184,8 +185,8 @@ export const projects: Project[] = [
       "CORS Domain Allowlisting & RBAC",
       "Custom DNS, SPF/DKIM/DMARC Email"
     ],
-    liveUrl: "https://linkedin.com/in/daksh-bhavsar-96b102339",
-    githubUrl: "https://github.com/DakshBhavsar007",
+    liveUrl: "https://between.indevs.in",
+    githubUrl: "https://github.com/DakshBhavsar007/Between",
     featured: true
   },
   {
@@ -195,7 +196,7 @@ export const projects: Project[] = [
     tags: ["React", "FastAPI", "Mapbox GL JS", "Gemini API"],
     description: "Built a full-stack NGO volunteer-coordination platform with a React frontend, FastAPI backend, real-time 3D crisis map, and weighted smart-matching algorithm.",
     longDescription: "Built a full-stack NGO volunteer-coordination platform with a React frontend and FastAPI backend. Features real-time 3D crisis mapping with Mapbox GL JS, weighted smart-matching algorithm for volunteer assignment (distance, skills, availability), Tesseract.js OCR and Gemini API for need categorization & urgency scoring, Cloudinary media uploads, and JWT-authenticated APIs.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/projects/sevasetu.svg",
     client: "SevaSetu Platform",
     year: "Live",
     role: "Full-Stack Developer",
@@ -209,43 +210,18 @@ export const projects: Project[] = [
       "Cloudinary Media & JWT Authentication",
       "MongoDB / SQLite (Turso) Storage"
     ],
-    liveUrl: "https://linkedin.com/in/daksh-bhavsar-96b102339",
-    githubUrl: "https://github.com/DakshBhavsar007",
+    liveUrl: "https://sevasetu-landing.onrender.com",
+    githubUrl: "https://github.com/DakshBhavsar007/SevaSetu",
     featured: false
   },
   {
     id: "proj-3",
-    title: "StudyVerse v2.0 — AI-Powered Study Platform",
-    category: "AI & SaaS",
-    tags: ["Flask", "Gemini API", "Socket.IO", "MySQL"],
-    description: "Engineered an AI-powered study platform integrating Gemini API for content generation with a gamification system (XP, ranks, badges, Pomodoro timer).",
-    longDescription: "Engineered an AI-powered study platform integrating Gemini API for content generation with a gamification system (XP, ranks, badges, Pomodoro timer). Implemented real-time live quiz battles using Socket.IO; deployed on Render.com.",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1000&auto=format&fit=crop",
-    client: "StudyVerse Platform",
-    year: "Live",
-    role: "Full-Stack & AI Engineer",
-    challenge: "Creating an engaging learning environment that combines AI-generated educational materials with low-latency competitive multiplayer elements.",
-    solution: "Integrated Gemini API for dynamic study content synthesis, built a full gamification reward system (XP, badges, Pomodoro), and deployed real-time Socket.IO quiz battle rooms.",
-    deliverables: [
-      "Gemini API Content Generation",
-      "Socket.IO Live Quiz Battles",
-      "Gamification (XP, Ranks, Badges, Pomodoro)",
-      "Python Flask Architecture",
-      "MySQL Database Design",
-      "Render.com Deployment"
-    ],
-    liveUrl: "https://linkedin.com/in/daksh-bhavsar-96b102339",
-    githubUrl: "https://github.com/DakshBhavsar007",
-    featured: false
-  },
-  {
-    id: "proj-4",
     title: "TestVerse v3.1 — Enterprise SaaS Testing Platform",
     category: "AI & SaaS",
     tags: ["React 19", "FastAPI", "MongoDB", "Playwright"],
     description: "Developed a multi-tenant SaaS testing platform with React 19 frontend, FastAPI backend, MongoDB storage, and Playwright automation.",
     longDescription: "Developed a multi-tenant SaaS testing platform with React 19 frontend, FastAPI backend, MongoDB storage, and Playwright automation. Implemented team collaboration tools, flexible test scheduling, and real-time monitoring dashboards.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/projects/testverse.svg",
     client: "TestVerse Platform",
     year: "Live",
     role: "Lead Full-Stack Developer",
@@ -259,9 +235,34 @@ export const projects: Project[] = [
       "Flexible Test Scheduling & Real-Time Monitoring",
       "MongoDB Data Storage"
     ],
-    liveUrl: "https://linkedin.com/in/daksh-bhavsar-96b102339",
-    githubUrl: "https://github.com/DakshBhavsar007",
+    liveUrl: "https://testverse-frontend.vercel.app",
+    githubUrl: "https://github.com/DakshBhavsar007/TestVerse-frontend",
     featured: true
+  },
+  {
+    id: "proj-4",
+    title: "StudyVerse v2.0 — AI-Powered Study Platform",
+    category: "AI & SaaS",
+    tags: ["Flask", "Gemini API", "Socket.IO", "MySQL"],
+    description: "Engineered an AI-powered study platform integrating Gemini API for content generation with a gamification system (XP, ranks, badges, Pomodoro timer).",
+    longDescription: "Engineered an AI-powered study platform integrating Gemini API for content generation with a gamification system (XP, ranks, badges, Pomodoro timer). Implemented real-time live quiz battles using Socket.IO; deployed on Render.com.",
+    image: "/images/projects/studyverse.svg",
+    client: "StudyVerse Platform",
+    year: "Live",
+    role: "Full-Stack & AI Engineer",
+    challenge: "Creating an engaging learning environment that combines AI-generated educational materials with low-latency competitive multiplayer elements.",
+    solution: "Integrated Gemini API for dynamic study content synthesis, built a full gamification reward system (XP, badges, Pomodoro), and deployed real-time Socket.IO quiz battle rooms.",
+    deliverables: [
+      "Gemini API Content Generation",
+      "Socket.IO Live Quiz Battles",
+      "Gamification (XP, Ranks, Badges, Pomodoro)",
+      "Python Flask Architecture",
+      "MySQL Database Design",
+      "Render.com Deployment"
+    ],
+    liveUrl: "https://studyverse-final.onrender.com",
+    githubUrl: "https://github.com/DakshBhavsar007/StudyVerse",
+    featured: false
   },
   {
     id: "proj-5",
@@ -282,7 +283,7 @@ export const projects: Project[] = [
       "Java & JDBC Database Architecture",
       "MySQL Relational Data Models"
     ],
-    liveUrl: "https://linkedin.com/in/daksh-bhavsar-96b102339",
+    liveUrl: "https://github.com/DakshBhavsar007",
     githubUrl: "https://github.com/DakshBhavsar007",
     featured: false
   }
