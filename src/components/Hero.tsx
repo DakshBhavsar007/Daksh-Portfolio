@@ -12,7 +12,7 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onExploreWork, onOpenContact }) => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [heroImage, setHeroImage] = useState<string>(() => {
-    return localStorage.getItem('daksh_hero_portrait') || portfolioConfig.personal.heroPortrait;
+    return localStorage.getItem('daksh_hero_portrait') || '/daksh-portrait.png';
   });
   const fileInputRef = useRef<HTMLInputElement>(null);
 
