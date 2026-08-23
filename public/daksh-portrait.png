@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1067" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradients for Red Glow -->
+    <radialGradient id="redGlowLeft" cx="15%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ff1a1a" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#b30000" stop-opacity="0.45"/>
+      <stop offset="85%" stop-color="#1a0000" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="redGlowRight" cx="85%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#ff1a1a" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#b30000" stop-opacity="0.45"/>
+      <stop offset="85%" stop-color="#1a0000" stop-opacity="0"/>
+    </radialGradient>
+    
+    <radialGradient id="rimRedHead" cx="50%" cy="20%" r="50%">
+      <stop offset="0%" stop-color="#ff3333" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#800000" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Skin Tone Gradients with Moody Shadowing -->
+    <linearGradient id="faceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c68a68"/>
+      <stop offset="50%" stop-color="#a66e4e"/>
+      <stop offset="100%" stop-color="#69412d"/>
+    </linearGradient>
+    
+    <linearGradient id="redRimSkin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3333" stop-opacity="0.9"/>
+      <stop offset="15%" stop-color="#ff3333" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="85%" stop-color="#ff3333" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ff3333" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Sunglasses Gradient -->
+    <linearGradient id="glassesGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151515"/>
+      <stop offset="40%" stop-color="#0a0a0a"/>
+      <stop offset="70%" stop-color="#1f1518"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+
+    <linearGradient id="glassesGloss" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#ff4444" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Suit Black Shadow Gradient -->
+    <linearGradient id="suitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e24"/>
+      <stop offset="40%" stop-color="#141418"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </linearGradient>
+    
+    <linearGradient id="lapelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#282830"/>
+      <stop offset="100%" stop-color="#111114"/>
+    </linearGradient>
+
+    <!-- Hair Tone Gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#252125"/>
+      <stop offset="40%" stop-color="#121013"/>
+      <stop offset="100%" stop-color="#080608"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Black Studio Canvas -->
+  <rect width="800" height="1067" fill="#060608"/>
+
+  <!-- Atmospheric Background Red Clouds / Backlight Smokes -->
+  <ellipse cx="120" cy="480" rx="360" ry="420" fill="url(#redGlowLeft)"/>
+  <ellipse cx="680" cy="480" rx="360" ry="420" fill="url(#redGlowRight)"/>
+  <ellipse cx="400" cy="220" rx="280" ry="240" fill="url(#rimRedHead)"/>
+
+  <!-- Background Rim Smoke Particles -->
+  <circle cx="220" cy="380" r="160" fill="#e60000" opacity="0.12" filter="blur(40px)"/>
+  <circle cx="580" cy="380" r="160" fill="#e60000" opacity="0.12" filter="blur(40px)"/>
+  <circle cx="400" cy="500" r="220" fill="#cc0000" opacity="0.08" filter="blur(60px)"/>
+
+  <g transform="translate(0, 40)">
+    <!-- Red Rim Lighting Silhouette Glow Behind Dakota's Body -->
+    <path d="M160 840 C170 650, 240 590, 310 570 C310 520, 320 460, 320 420 C270 380, 280 220, 330 180 C360 110, 440 110, 470 180 C520 220, 530 380, 480 420 C480 460, 490 520, 490 570 C560 590, 630 650, 640 840 Z" fill="#ff2222" opacity="0.35" filter="blur(25px)"/>
+
+    <!-- Black Suit Jacket Silhouette -->
+    <!-- Base Body Silhouette -->
+    <path d="M140 1027 L180 720 C200 640, 260 590, 330 570 L340 680 L400 760 L460 680 L470 570 C540 590, 600 640, 620 720 L660 1027 Z" fill="url(#suitGrad)"/>
+    
+    <!-- Red Rim Light on Shoulders -->
+    <path d="M140 1027 L180 720 C200 640, 250 595, 300 585 L300 600 C255 610, 210 650, 195 725 L155 1027 Z" fill="#ff3333" opacity="0.65"/>
+    <path d="M660 1027 L620 720 C600 640, 550 595, 500 585 L500 600 C545 610, 590 650, 605 725 L645 1027 Z" fill="#ff3333" opacity="0.65"/>
+
+    <!-- Black Button-Down Shirt -->
+    <path d="M330 560 L400 690 L470 560 L440 500 L360 500 Z" fill="#0c0c0e"/>
+    <!-- Shirt Collar Left & Right -->
+    <polygon points="345,510 395,600 375,615 330,530" fill="#18181c"/>
+    <polygon points="455,510 405,600 425,615 470,530" fill="#18181c"/>
+    <!-- Red Accent Edge on Shirt Collar -->
+    <line x1="330" y1="530" x2="345" y2="510" stroke="#ff4444" stroke-width="2.5" opacity="0.7"/>
+    <line x1="470" y1="530" x2="455" y2="510" stroke="#ff4444" stroke-width="2.5" opacity="0.7"/>
+
+    <!-- Suit Lapels Left & Right -->
+    <!-- Left Lapel -->
+    <polygon points="260,600 340,680 390,750 340,750 240,650" fill="url(#lapelGrad)"/>
+    <line x1="260" y1="600" x2="390" y2="750" stroke="#ff3333" stroke-width="1.5" opacity="0.3"/>
+    <!-- Right Lapel -->
+    <polygon points="540,600 460,680 410,750 460,750 560,650" fill="url(#lapelGrad)"/>
+    <line x1="540" y1="600" x2="410" y2="750" stroke="#ff3333" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- Neck with Contour and Shadow -->
+    <path d="M350 420 C350 480, 360 530, 400 545 C440 530, 450 480, 450 420 Z" fill="#8c583c"/>
+    <path d="M350 420 C350 480, 360 530, 400 545 C440 530, 450 480, 450 420 Z" fill="url(#redRimSkin)" opacity="0.8"/>
+    <!-- Adam's Apple & Neck Shadow -->
+    <path d="M380 460 Q400 490 420 460 Q400 475 380 460 Z" fill="#623a24"/>
+
+    <!-- Head & Face Structure -->
+    <path d="M305 280 C295 380, 335 485, 400 490 C465 485, 505 380, 495 280 C490 190, 455 160, 400 160 C345 160, 310 190, 305 280 Z" fill="url(#faceGrad)"/>
+    <!-- Left Rim Light on Jawline & Ear -->
+    <path d="M305 280 C295 380, 335 485, 400 490 L395 470 C340 465, 312 375, 320 280 Z" fill="#ff3333" opacity="0.85"/>
+    <!-- Right Rim Light on Jawline & Ear -->
+    <path d="M495 280 C505 380, 465 485, 400 490 L405 470 C460 465, 488 375, 480 280 Z" fill="#ff3333" opacity="0.85"/>
+
+    <!-- Ears Left & Right -->
+    <path d="M295 310 C285 325, 285 365, 305 375" stroke="#ff3333" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M505 310 C515 325, 515 365, 495 375" stroke="#ff3333" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M295 310 C285 325, 285 365, 305 375" stroke="#8a5436" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M505 310 C515 325, 515 365, 495 375" stroke="#8a5436" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Nose Structure -->
+    <path d="M394 320 L388 395 C388 405, 412 405, 412 395 L406 320 Z" fill="#875338"/>
+    <ellipse cx="388" cy="398" rx="6" ry="3" fill="#4d2c1b"/>
+    <ellipse cx="412" cy="398" rx="6" ry="3" fill="#4d2c1b"/>
+    <!-- Nose Highlight -->
+    <line x1="400" y1="330" x2="400" y2="390" stroke="#dba485" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Confident Lips -->
+    <path d="M365 432 C385 425, 415 425, 435 432 C415 440, 385 440, 365 432 Z" fill="#804733"/>
+    <path d="M370 433 C385 430, 415 430, 430 433 C415 448, 385 448, 370 433 Z" fill="#9e5842"/>
+    <line x1="365" y1="432" x2="435" y2="432" stroke="#54281a" stroke-width="2.5"/>
+
+    <!-- Modern Dark Wayfarer Sunglasses -->
+    <!-- Sunglasses Frame Outer -->
+    <path d="M310 295 C325 285, 380 288, 395 302 C400 305, 405 305, 410 302 C425 288, 480 285, 495 295 C505 302, 500 365, 470 375 C435 385, 415 365, 412 335 C412 330, 393 330, 393 335 C390 365, 370 385, 335 375 C305 365, 300 302, 310 295 Z" fill="#080808" stroke="#1c1c1c" stroke-width="3"/>
+
+    <!-- Left Lens -->
+    <path d="M320 305 C335 298, 375 300, 385 315 C385 345, 375 368, 345 368 C325 368, 315 345, 320 305 Z" fill="url(#glassesGlass)"/>
+    <path d="M320 305 C335 298, 375 300, 385 315 C385 345, 375 368, 345 368 C325 368, 315 345, 320 305 Z" fill="url(#glassesGloss)"/>
+
+    <!-- Right Lens -->
+    <path d="M485 305 C470 298, 430 300, 420 315 C420 345, 430 368, 460 368 C480 368, 490 345, 485 305 Z" fill="url(#glassesGlass)"/>
+    <path d="M485 305 C470 298, 430 300, 420 315 C420 345, 430 368, 460 368 C480 368, 490 345, 485 305 Z" fill="url(#glassesGloss)"/>
+
+    <!-- Sunglasses Metallic Pin Accents & Red Reflection -->
+    <rect x="312" y="302" width="5" height="3" rx="1.5" fill="#e0e0e0"/>
+    <rect x="488" y="302" width="5" height="3" rx="1.5" fill="#e0e0e0"/>
+    <line x1="330" y1="315" x2="350" y2="355" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+    <line x1="455" y1="315" x2="475" y2="355" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+
+    <!-- Sleek Styled Haircut with Rim Light Highlights -->
+    <path d="M305 270 C295 190, 335 125, 400 120 C470 115, 510 180, 500 270 C490 220, 460 170, 400 170 C340 170, 315 220, 305 270 Z" fill="url(#hairGrad)"/>
+    <!-- Forehead Hair Strands & Texture -->
+    <path d="M310 240 C330 180, 370 160, 410 165 C440 168, 470 190, 490 235 C460 210, 430 200, 400 205 C360 210, 330 225, 310 240 Z" fill="#181518"/>
+    <!-- Volumetric Hair Waves -->
+    <path d="M340 145 C370 130, 420 130, 450 145 C470 160, 480 180, 480 180 C450 155, 410 150, 370 160 C350 165, 340 175, 340 175 Z" fill="#2a2228"/>
+    
+    <!-- Top & Edge Red Hair Rim Glow -->
+    <path d="M300 270 C290 190, 330 125, 400 120 C470 115, 510 180, 505 270" stroke="#ff3333" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.9" filter="blur(1.5px)"/>
+    <path d="M320 200 C350 140, 400 130, 460 145" stroke="#ff6666" stroke-width="3" fill="none" opacity="0.8"/>
+  </g>
+</svg>

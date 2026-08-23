@@ -43,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreWork, onOpenContact }) => {
   const handleResetImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     localStorage.removeItem('daksh_hero_portrait');
-    setHeroImage(portfolioConfig.personal.heroPortrait);
+    setHeroImage('/daksh-portrait.png');
   };
 
   const currentRole = roles[currentRoleIndex];
@@ -179,8 +179,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreWork, onOpenContact }) => {
                 loading="eager"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src =
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop';
+                  const target = e.currentTarget as HTMLImageElement;
+                  if (!target.src.endsWith('/daksh-portrait.svg')) {
+                    target.src = '/daksh-portrait.svg';
+                  }
                 }}
               />
 
