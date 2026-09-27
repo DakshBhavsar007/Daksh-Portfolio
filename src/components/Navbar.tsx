@@ -200,7 +200,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact, onOpenResume }) =
               >
                 <div className="flex items-center gap-2">
                   <Download className="w-4 h-4 text-[#111111]" />
-                  <span>Download Role Resume (5)</span>
+                  <span>Download Role Resume ({resumesData.length})</span>
                 </div>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform ${

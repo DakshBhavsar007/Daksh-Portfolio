@@ -34,6 +34,68 @@ export interface ResumeRole {
 
 export const resumesData: ResumeRole[] = [
   {
+    id: "ai-engineering",
+    roleTitle: "AI Engineering Intern Candidate | Python & GenAI Developer",
+    shortRole: "AI Engineering Intern",
+    subtitle: "RAG Pipelines, LangChain (LCEL), pgvector & Multi-Provider LLMs",
+    badge: "Featured • Target Role",
+    iconName: "Sparkles",
+    color: "#7C3AED",
+    summary: "Computer Engineering student (Semester 5) building production-grade Python backends and GenAI systems. Hands-on experience designing Retrieval-Augmented Generation (RAG) pipelines, LangChain (LCEL) orchestration, vector search with pgvector, and multi-provider LLM integration (Gemini, Groq) across live, production-deployed platforms.",
+    education: {
+      degree: "B.E. Computer Engineering",
+      institution: "LJ University",
+      location: "Ahmedabad, Gujarat",
+      period: "Jul 2024 – May 2028",
+      cgpa: "8.28",
+      semester: "Semester 5"
+    },
+    skillsByCategory: [
+      {
+        category: "Technical Skills",
+        skills: "Python, FastAPI, Django, Flask, LangChain (LCEL), Retrieval-Augmented Generation (RAG), Vector Search (pgvector), Gemini API, Groq API, PostgreSQL, MongoDB, MySQL, SQLite, Celery, Redis, RESTful APIs, Docker, AWS (EC2, VPC), Nginx, Git, GitHub, JWT"
+      }
+    ],
+    experienceOrProjects: [
+      {
+        title: "Resume RAG Search Engine — Production Candidate Retrieval Platform",
+        subtitle: "Production Deployment",
+        type: "project",
+        liveUrl: "https://rag.dakshaws.sryze.cc/docs",
+        githubUrl: "https://github.com/DakshBhavsar007/Resume-RAG-Search",
+        points: [
+          "Architected a production RAG-based semantic candidate search engine using section-aware regex chunking (Summary, Skills, Experience, Projects) to preserve semantic coherence.",
+          "Implemented 3,072-dimensional vector search in PostgreSQL using pgvector's cosine distance operator (<=>) with Google's gemini-embedding-001.",
+          "Built a custom LangChain retriever (subclassing BaseRetriever) with an LCEL pipeline (RunnablePassthrough | Prompt | Gemini 2.5 Flash | StrOutputParser), enforcing strict [resume_id] citation constraints.",
+          "Exposed FastAPI REST endpoints (/query, /health) with latency and token-usage observability; ran a structured 10-query evaluation benchmark rather than eyeballing results.",
+          "Containerized with Docker and deployed live on AWS EC2 behind an Nginx reverse proxy with Route 53 DNS and automated Let's Encrypt SSL."
+        ],
+        techStack: "Python, FastAPI, LangChain (LCEL), PostgreSQL (pgvector), Gemini API, Docker, AWS EC2, Nginx, Route 53"
+      },
+      {
+        title: "Between — AI-Powered Recruitment & Resume Platform",
+        subtitle: "Production Deployment",
+        type: "project",
+        liveUrl: "https://between.indevs.in",
+        githubUrl: "https://github.com/DakshBhavsar007/Between",
+        points: [
+          "Built a Django backend powering automated resume parsing, ATS scoring, and LLM-based candidate evaluation.",
+          "Designed a multi-provider LLM rotation system (Gemini + Groq fallback) for reliability under quota limits, using Celery and Redis for async task processing."
+        ],
+        techStack: "Django, Celery, Redis, PostgreSQL (Neon), Gemini API, Groq API"
+      }
+    ],
+    certifications: [
+      "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate — Oracle (Issued Nov 2025)",
+      "Python & Pandas Certification — Royal Technosoft Pvt. Ltd. (Certopus, Issued Sep 2026)",
+      "Core Java Certification — Royal Technosoft Pvt. Ltd. (Certopus, Issued Sep 2026)",
+      "View all certifications: LinkedIn Certifications"
+    ],
+    languages: [
+      "English (Fluent)"
+    ]
+  },
+  {
     id: "full-stack",
     roleTitle: "Full-Stack Developer | AI Enthusiast",
     shortRole: "Full-Stack Developer",

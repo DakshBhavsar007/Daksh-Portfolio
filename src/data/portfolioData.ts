@@ -4,7 +4,7 @@ export const portfolioConfig = {
   personal: {
     name: "Daksh Bhavsar",
     fullName: "BHAVSAR DAKSH NARENDRABHAI",
-    title: "Full-Stack Developer | AI Enthusiast",
+    title: "AI Engineering Intern Candidate | Python & GenAI Developer",
     shortBio: "Computer Engineering student (Semester 5) with strong experience building full-stack, AI-powered, real-time, and SaaS applications using modern frontend, backend, database, and cloud technologies.",
     tagline: "Building scalable full-stack web applications and intelligent multi-provider AI systems.",
     summary: "Highly motivated Computer Engineering student (Semester 5) with a strong foundation in full-stack web development and AI integration. Proficient in Django, Flask, FastAPI, React, Node.js, and Python, with a proven ability to architect, develop, and deploy production-grade platforms. Creator of Between, an AI-powered recruitment and resume platform, alongside SevaSetu, StudyVerse, and TestVerse — showcasing expertise in multi-provider LLM systems, cloud deployment, and scalable system design.",
@@ -19,6 +19,8 @@ export const portfolioConfig = {
     heroPortrait: "/daksh-portrait.png",
   },
   roles: [
+    "AI Engineering Intern",
+    "Python & GenAI Developer",
     "Full-Stack Developer",
     "Backend Developer",
     "Frontend Developer",

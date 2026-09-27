@@ -25,7 +25,7 @@ export default function App() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isQuickHireOpen, setIsQuickHireOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
-  const [selectedResumeRole, setSelectedResumeRole] = useState<string>('full-stack');
+  const [selectedResumeRole, setSelectedResumeRole] = useState<string>('ai-engineering');
   const [preselectedService, setPreselectedService] = useState<string | undefined>(undefined);
 
   const handleOpenResume = (roleId?: string) => {

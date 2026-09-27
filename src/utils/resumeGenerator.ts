@@ -186,9 +186,15 @@ export function generateResumeHtml(resume: ResumeRole): string {
   ${projectsHtml}
 
   <div class="section-title">CERTIFICATIONS</div>
-  <div style="font-size: 12.5px; color: #1a73e8;">
-    <a href="https://linkedin.com/in/daksh-bhavsar-96b102339" target="_blank" style="color: #1a73e8; text-decoration: underline;">View all certifications on LinkedIn/GitHub</a>
-  </div>
+  ${
+    resume.certifications && resume.certifications.length > 0
+      ? `<ul style="margin: 0; padding-left: 18px; color: #222222; font-size: 12.5px; line-height: 1.45;">
+          ${resume.certifications.map((c) => `<li style="margin-bottom: 3px;">${c}</li>`).join('')}
+        </ul>`
+      : `<div style="font-size: 12.5px; color: #1a73e8;">
+          <a href="https://linkedin.com/in/daksh-bhavsar-96b102339" target="_blank" style="color: #1a73e8; text-decoration: underline;">View all certifications on LinkedIn/GitHub</a>
+        </div>`
+  }
 
   <div class="section-title">LANGUAGES</div>
   <div style="font-size: 12.5px; color: #222222;">

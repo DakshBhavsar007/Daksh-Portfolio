@@ -9,7 +9,7 @@ interface ResumeModalProps {
   initialRoleId?: string;
 }
 
-const roleIcons: Record<string, React.ReactNode> = {
+const roleIcons: Record<string, React.ReactNode> = {\n  'ai-engineering': <Sparkles className=\"w-4 h-4 text-purple-600\" />,
   'full-stack': <Layers className="w-4 h-4" />,
   'backend': <Server className="w-4 h-4" />,
   'frontend': <Layout className="w-4 h-4" />,
@@ -20,7 +20,7 @@ const roleIcons: Record<string, React.ReactNode> = {
 export const ResumeModal: React.FC<ResumeModalProps> = ({
   isOpen,
   onClose,
-  initialRoleId = 'full-stack'
+  initialRoleId = 'ai-engineering'
 }) => {
   const [selectedRoleId, setSelectedRoleId] = useState<string>(initialRoleId);
   const [copied, setCopied] = useState(false);
@@ -61,7 +61,7 @@ ${p.points.map((pt) => `• ${pt}`).join('\n')}${p.techStack ? `\nTech Stack: ${
   )
   .join('\n\n')}
 
-LANGUAGES
+${currentResume.certifications && currentResume.certifications.length > 0 ? `CERTIFICATIONS\\n${currentResume.certifications.map(c => `• ${c}`).join('\\n')}\\n\\n` : ''}LANGUAGES
 ${currentResume.languages.join(', ')}
     `.trim();
 
@@ -307,14 +307,22 @@ ${currentResume.languages.join(', ')}
                 <h2 className="text-[11.5px] font-extrabold uppercase tracking-wider text-[#0D47A1] border-b border-[#0D47A1] pb-0.5 mb-1.5">
                   Certifications
                 </h2>
-                <a
-                  href="https://linkedin.com/in/daksh-bhavsar-96b102339"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[12px] text-[#1D4ED8] hover:underline"
-                >
-                  View all certifications on LinkedIn
-                </a>
+                {currentResume.certifications && currentResume.certifications.length > 0 ? (
+                  <ul className="list-disc list-outside pl-4 space-y-1 text-[#333333] text-[11px] leading-relaxed">
+                    {currentResume.certifications.map((c, i) => (
+                      <li key={i}>{c}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <a
+                    href="https://linkedin.com/in/daksh-bhavsar-96b102339"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[12px] text-[#1D4ED8] hover:underline"
+                  >
+                    View all certifications on LinkedIn
+                  </a>
+                )}
               </div>
               <div>
                 <h2 className="text-[11.5px] font-extrabold uppercase tracking-wider text-[#0D47A1] border-b border-[#0D47A1] pb-0.5 mb-1.5">
