@@ -9,7 +9,8 @@ interface ResumeDropdownProps {
   buttonVariant?: 'nav' | 'hero' | 'compact';
 }
 
-const roleIcons: Record<string, React.ReactNode> = {\n  'ai-engineering': <Sparkles className=\"w-4 h-4 text-purple-600\" />,
+const roleIcons: Record<string, React.ReactNode> = {
+  'ai-engineering': <Sparkles className="w-4 h-4 text-purple-600" />,
   'full-stack': <Layers className="w-4 h-4 text-[#111111]" />,
   'backend': <Server className="w-4 h-4 text-blue-600" />,
   'frontend': <Layout className="w-4 h-4 text-teal-600" />,
