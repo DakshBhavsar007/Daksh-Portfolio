@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0E17"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0B1120"/>
+    </linearGradient>
+    <linearGradient id="argoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF7B4D"/>
+      <stop offset="100%" stop-color="#E25526"/>
+    </linearGradient>
+    <linearGradient id="k8sGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#326CE5"/>
+      <stop offset="100%" stop-color="#1B4BB5"/>
+    </linearGradient>
+    <linearGradient id="awsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9900"/>
+      <stop offset="100%" stop-color="#E07700"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="glowArgo" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="glowK8s" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Grid Lines -->
+  <g stroke="#334155" stroke-opacity="0.25" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+
+  <!-- Title & Top Badges -->
+  <text x="70" y="70" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" letter-spacing="0.5">
+    BETWEEN-GITOPS
+  </text>
+  <text x="325" y="70" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="500">
+    |  Production Kubernetes &amp; ArgoCD Delivery Engine
+  </text>
+
+  <!-- Status Chip -->
+  <rect x="940" y="44" width="190" height="34" rx="17" fill="#065F46" fill-opacity="0.6" stroke="#10B981" stroke-width="1.5"/>
+  <circle cx="960" cy="61" r="5" fill="#10B981"/>
+  <text x="975" y="66" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">
+    LIVE SYNCED • ARGO
+  </text>
+
+  <!-- GitOps Pipeline Stream Flow -->
+  <!-- 1. Code & CI Box -->
+  <g transform="translate(70, 120)">
+    <rect width="210" height="480" rx="14" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+    
+    <rect x="20" y="20" width="170" height="34" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="105" y="42" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+      1. SOURCE &amp; CI
+    </text>
+
+    <!-- Git Commit Card -->
+    <rect x="20" y="75" width="170" height="90" rx="10" fill="#0F172A" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="32" y="100" fill="#60A5FA" font-family="monospace" font-size="11" font-weight="700">git push origin main</text>
+    <text x="32" y="122" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">Between-GitOPS</text>
+    <text x="32" y="145" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Monorepo App Code</text>
+
+    <!-- GitHub Actions Card -->
+    <rect x="20" y="185" width="170" height="115" rx="10" fill="#0F172A" stroke="#475569" stroke-width="1"/>
+    <text x="32" y="210" fill="#F1F5F9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">GitHub Actions CI</text>
+    <text x="32" y="235" fill="#10B981" font-family="monospace" font-size="11">✓ Django Tests</text>
+    <text x="32" y="255" fill="#10B981" font-family="monospace" font-size="11">✓ React Vite Build</text>
+    <text x="32" y="275" fill="#10B981" font-family="monospace" font-size="11">✓ Multi-stage Docker</text>
+
+    <!-- GHCR Card -->
+    <rect x="20" y="320" width="170" height="125" rx="10" fill="#0F172A" stroke="#818CF8" stroke-width="1.5"/>
+    <text x="32" y="345" fill="#A5B4FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">GHCR Registry</text>
+    <text x="32" y="370" fill="#E2E8F0" font-family="monospace" font-size="10">ghcr.io/between-backend</text>
+    <text x="32" y="390" fill="#E2E8F0" font-family="monospace" font-size="10">ghcr.io/between-frontend</text>
+    <text x="32" y="418" fill="#10B981" font-family="monospace" font-size="11" font-weight="600">tag: sha-commit (immutable)</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 290 360 L 330 360" stroke="#EF7B4D" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <polygon points="335,360 325,354 325,366" fill="#EF7B4D"/>
+
+  <!-- 2. ArgoCD Control Plane Box -->
+  <g transform="translate(340, 120)">
+    <rect width="230" height="480" rx="14" fill="url(#cardGrad)" stroke="#EF7B4D" stroke-width="2" filter="url(#glowArgo)"/>
+    
+    <rect x="20" y="20" width="190" height="34" rx="8" fill="#EF7B4D" fill-opacity="0.2" stroke="#EF7B4D" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#FFEDD5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+      2. ARGOCD GITOPS ENGINE
+    </text>
+
+    <!-- Argo Sync Loop Details -->
+    <rect x="20" y="75" width="190" height="140" rx="10" fill="#0F172A" stroke="#EF7B4D" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="50" cy="110" r="18" fill="url(#argoGrad)"/>
+    <text x="50" y="116" fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">A</text>
+    
+    <text x="80" y="105" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700">Declarative Sync</text>
+    <text x="80" y="125" fill="#FDBA74" font-family="monospace" font-size="11">gitops-manifests/</text>
+    <text x="80" y="142" fill="#FDBA74" font-family="monospace" font-size="11">overlays/staging</text>
+    <text x="32" y="178" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5">
+      Auto-heals cluster drift &amp; rolls back faulty releases instantly
+    </text>
+    <text x="32" y="200" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">
+      ● Health: Healthy | Synced
+    </text>
+
+    <!-- Kustomize Config Card -->
+    <rect x="20" y="235" width="190" height="110" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="32" y="260" fill="#F1F5F9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">Kustomize Overlays</text>
+    <text x="32" y="282" fill="#94A3B8" font-family="monospace" font-size="11">ingress.yaml (Traefik)</text>
+    <text x="32" y="302" fill="#94A3B8" font-family="monospace" font-size="11">backend-deploy.yaml</text>
+    <text x="32" y="322" fill="#94A3B8" font-family="monospace" font-size="11">frontend-deploy.yaml</text>
+
+    <!-- Argo Webhook/Sync -->
+    <rect x="20" y="360" width="190" height="85" rx="10" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="32" y="385" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Zero-Downtime Rollout</text>
+    <text x="32" y="405" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">RollingUpdate strategy</text>
+    <text x="32" y="425" fill="#10B981" font-family="monospace" font-size="11">maxSurge: 1 | maxUnavail: 0</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 580 360 L 620 360" stroke="#326CE5" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <polygon points="625,360 615,354 615,366" fill="#326CE5"/>
+
+  <!-- 3. k3s Kubernetes Cluster on AWS EC2 -->
+  <g transform="translate(630, 120)">
+    <rect width="270" height="480" rx="14" fill="url(#cardGrad)" stroke="#326CE5" stroke-width="2" filter="url(#glowK8s)"/>
+
+    <rect x="20" y="20" width="230" height="34" rx="8" fill="#326CE5" fill-opacity="0.2" stroke="#326CE5" stroke-width="1.5"/>
+    <text x="135" y="42" fill="#DBEAFE" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+      3. K3S KUBERNETES ON EC2
+    </text>
+
+    <!-- Pods Grid -->
+    <!-- Ingress Pod -->
+    <rect x="20" y="70" width="230" height="55" rx="8" fill="#0F172A" stroke="#3B82F6" stroke-width="1"/>
+    <text x="32" y="93" fill="#60A5FA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Ingress: Traefik</text>
+    <text x="32" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Let's Encrypt TLS (HTTP-01) • Ports 80 &amp; 443</text>
+
+    <!-- Frontend Pod -->
+    <rect x="20" y="135" width="230" height="60" rx="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1"/>
+    <text x="32" y="158" fill="#22D3EE" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Pod: react-frontend</text>
+    <text x="32" y="178" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">React 18 + Vite 8 SPA • Nginx Static Serve</text>
+
+    <!-- Backend Pod -->
+    <rect x="20" y="205" width="230" height="65" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
+    <text x="32" y="228" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Pod: django-backend</text>
+    <text x="32" y="246" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Django 5 + 12 Multi-Agent LLMs</text>
+    <text x="32" y="262" fill="#CBD5E1" font-family="monospace" font-size="10">Multi-key Gemini API rotation</text>
+
+    <!-- Celery & Redis Pods -->
+    <rect x="20" y="280" width="110" height="70" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1"/>
+    <text x="28" y="303" fill="#FBBF24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">Pod: Celery</text>
+    <text x="28" y="323" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Async Tasks</text>
+    <text x="28" y="338" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Worker Queue</text>
+
+    <rect x="140" y="280" width="110" height="70" rx="8" fill="#0F172A" stroke="#EF4444" stroke-width="1"/>
+    <text x="148" y="303" fill="#F87171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700">Pod: Redis 7</text>
+    <text x="148" y="323" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Cache / Auth</text>
+    <text x="148" y="338" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10">Broker</text>
+
+    <!-- Node Spec Badge -->
+    <rect x="20" y="365" width="230" height="85" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="32" y="390" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">AWS EC2 t3.small Host</text>
+    <text x="32" y="410" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">Ubuntu 24.04 LTS (ap-south-1)</text>
+    <text x="32" y="430" fill="#38BDF8" font-family="monospace" font-size="10.5">k3s v1.29+k3s1 lightweight runtime</text>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <path d="M 910 360 L 935 360" stroke="#FF9900" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <polygon points="940,360 930,354 930,366" fill="#FF9900"/>
+
+  <!-- 4. AWS Managed Services (RDS & Route53 & Toggle) -->
+  <g transform="translate(945, 120)">
+    <rect width="185" height="480" rx="14" fill="url(#cardGrad)" stroke="#FF9900" stroke-width="1.5"/>
+
+    <rect x="15" y="20" width="155" height="34" rx="8" fill="#FF9900" fill-opacity="0.2" stroke="#FF9900" stroke-width="1.5"/>
+    <text x="92" y="42" fill="#FED7AA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">
+      4. AWS SERVICES
+    </text>
+
+    <!-- AWS RDS Card -->
+    <rect x="15" y="75" width="155" height="120" rx="10" fill="#0F172A" stroke="#FF9900" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="25" y="100" fill="#FDBA74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">AWS RDS PostgreSQL</text>
+    <text x="25" y="122" fill="#E2E8F0" font-family="monospace" font-size="10.5">PostgreSQL 15.13</text>
+    <text x="25" y="142" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Instance: db.t4g.micro</text>
+    <text x="25" y="162" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Private Subnet SG Isolated</text>
+    <text x="25" y="182" fill="#10B981" font-family="monospace" font-size="10">Automated Daily Backups</text>
+
+    <!-- Route 53 Card -->
+    <rect x="15" y="210" width="155" height="110" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="25" y="235" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="700">Route 53 DNS</text>
+    <text x="25" y="258" fill="#38BDF8" font-family="monospace" font-size="10">between.dakshaws</text>
+    <text x="25" y="275" fill="#38BDF8" font-family="monospace" font-size="10">.sryze.cc</text>
+    <text x="25" y="302" fill="#10B981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">HTTPS Encrypted</text>
+
+    <!-- Cost Toggle Automation Card -->
+    <rect x="15" y="335" width="155" height="110" rx="10" fill="#1E293B" stroke="#10B981" stroke-width="1"/>
+    <text x="25" y="360" fill="#34D399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">Cost-Toggle Script</text>
+    <text x="25" y="382" fill="#E2E8F0" font-family="monospace" font-size="9.5">Between-AWS-Toggle.bat</text>
+    <text x="25" y="402" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">One-click EC2+RDS stop</text>
+    <text x="25" y="422" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5">Zero idle cloud charges</text>
+  </g>
+
+  <!-- Bottom Tech Pills Bar -->
+  <g transform="translate(70, 620)">
+    <text x="0" y="16" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">TECH STACK:</text>
+    <text x="90" y="16" fill="#94A3B8" font-family="monospace" font-size="11.5">
+      k3s Kubernetes • ArgoCD • AWS EC2 &amp; RDS • Docker • GitHub Actions • GHCR • Traefik Ingress • Let's Encrypt TLS • Django • React • Celery • Redis
+    </text>
+  </g>
+</svg>

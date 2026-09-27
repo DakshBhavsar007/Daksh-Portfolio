@@ -378,8 +378,8 @@ export const resumesData: ResumeRole[] = [
         skills: "TCP/IP fundamentals, DNS configuration & troubleshooting, DHCP, SPF/DKIM/DMARC email authentication, VPC & security groups"
       },
       {
-        category: "DevOps & Cloud",
-        skills: "AWS (EC2, VPC, S3, ALB/ASG, CloudWatch), Docker & Docker Compose, Jenkins (CI/CD basics), Git/GitHub, Render, Vercel, Redis, Celery"
+        category: "DevOps, Kubernetes & Cloud",
+        skills: "Kubernetes (k3s), ArgoCD (GitOps), AWS (EC2, RDS, VPC, S3, Route 53), Docker, GitHub Actions & GHCR, Traefik Ingress, Let's Encrypt TLS, Redis, Celery"
       },
       {
         category: "Currently Learning",
@@ -405,17 +405,19 @@ export const resumesData: ResumeRole[] = [
         techStack: "AWS EC2, Docker, Nginx, Route 53, Let's Encrypt SSL, Linux (Ubuntu), Elastic IP, Uvicorn"
       },
       {
-        title: "Between — AI Recruitment & Resume Platform (Production)",
-        subtitle: "Production Infrastructure & Async Workers",
-        type: "experience",
-        liveUrl: "https://between.indevs.in",
-        githubUrl: "https://github.com/DakshBhavsar007/Between",
+        title: "Between-GitOPS — Enterprise AI Recruitment Platform (k3s, ArgoCD, AWS EC2 & RDS)",
+        subtitle: "Production Kubernetes & GitOps Continuous Delivery",
+        type: "project",
+        liveUrl: "https://between.dakshaws.sryze.cc",
+        githubUrl: "https://github.com/DakshBhavsar007/Between-GitOPS",
         points: [
-          "Migrating the production backend from Render to a self-managed AWS EC2 instance, containerizing the backend, Celery, and Redis together with Docker Compose for cost-efficient, single-instance infrastructure.",
-          "Configured custom DNS and diagnosed/resolved SPF, DKIM, and DMARC misconfigurations to restore transactional email deliverability on the production domain.",
-          "Monitor server and application health and debug production backend issues (middleware errors, race conditions, route conflicts) on a live, multi-service deployment.",
-          "Set up Celery and Redis for reliable async task processing (LLM calls, resume parsing) with a multi-provider fallback system."
-        ]
+          "Deployed multi-service architecture on AWS EC2 (t3.small) using a lightweight k3s Kubernetes cluster managed declaratively via ArgoCD GitOps controller.",
+          "Configured automated GitHub Actions CI pipeline running frontend/backend tests, building multi-stage Docker images, and publishing immutable SHA-tagged images to GitHub Container Registry (GHCR).",
+          "Engineered ingress with Traefik controller and automated Let's Encrypt TLS certificates (HTTP-01 ACME challenge), routing traffic to internal ClusterIP services.",
+          "Isolated production data in AWS RDS PostgreSQL 15.13 (db.t4g.micro) within private subnets, with Redis caching and Celery background workers.",
+          "Built an automated PowerShell / AWS CLI cost-management toggle (Between-AWS-Toggle) safely pausing/resuming EC2 & RDS and syncing Route 53 DNS records dynamically."
+        ],
+        techStack: "Kubernetes (k3s), ArgoCD, AWS EC2, AWS RDS PostgreSQL, Docker, GitHub Actions, GHCR, Traefik, Let's Encrypt SSL, Route 53, PowerShell"
       },
       {
         title: "AWS Cloud Infrastructure — Hands-on Labs",

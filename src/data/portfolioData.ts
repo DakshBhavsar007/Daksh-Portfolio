@@ -60,9 +60,9 @@ export const clientLogos: ClientLogo[] = [
 
 export const statistics: StatItem[] = [
   {
-    value: "05+",
+    value: "06+",
     label: "Production Platforms Built",
-    sublabel: "Resume RAG Engine, Between, SevaSetu, StudyVerse, and TestVerse engineered from concept to live deployment."
+    sublabel: "Between-GitOPS, Resume RAG Search Engine, Between, SevaSetu, StudyVerse, and TestVerse engineered from concept to live deployment."
   },
   {
     value: "8.28",
@@ -103,6 +103,22 @@ export const services: ServiceItem[] = [
 ];
 
 export const experiences: ExperienceItem[] = [
+  {
+    id: "exp-gitops",
+    role: "Kubernetes & GitOps Cloud Architect",
+    company: "Between-GitOPS Platform",
+    description: "Architected and deployed an automated Kubernetes (k3s) and ArgoCD GitOps delivery pipeline on AWS EC2 & RDS.",
+    period: "Live",
+    location: "AWS Cloud (ap-south-1)",
+    highlights: [
+      "Deployed k3s Kubernetes cluster on AWS EC2 with ArgoCD declarative continuous delivery and automated sync",
+      "Configured GitHub Actions CI publishing immutable multi-stage Docker images to GitHub Container Registry (GHCR)",
+      "Configured Traefik Ingress with automated Let's Encrypt SSL/TLS certificates and HTTPS redirection",
+      "Isolated production storage in AWS RDS PostgreSQL 15 within private subnet security groups, with automated daily backups",
+      "Authored PowerShell AWS CLI cost-toggle script for one-click stopping/starting of EC2 and RDS with dynamic Route 53 DNS updates"
+    ],
+    skills: ["Kubernetes (k3s)", "ArgoCD", "AWS EC2", "AWS RDS", "Docker", "GitHub Actions", "GHCR", "Traefik", "Let's Encrypt", "Route 53", "PostgreSQL", "PowerShell"]
+  },
   {
     id: "exp-rag",
     role: "RAG & Cloud Systems Creator",
@@ -179,6 +195,33 @@ export const experiences: ExperienceItem[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    id: "proj-gitops",
+    title: "Between-GitOps — Kubernetes, ArgoCD & AWS Cloud Platform",
+    category: "DevOps & Cloud",
+    tags: ["Kubernetes (k3s)", "ArgoCD", "AWS EC2 & RDS", "Docker", "GitHub Actions", "Traefik Ingress", "Let's Encrypt TLS", "Django", "React"],
+    description: "Production GitOps deployment of an enterprise multi-agent AI recruitment platform on AWS EC2 using a lightweight k3s Kubernetes cluster, ArgoCD declarative continuous delivery, and AWS RDS PostgreSQL.",
+    longDescription: "Architected and deployed a production-grade GitOps continuous delivery infrastructure on AWS EC2 (t3.small) running a lightweight k3s Kubernetes cluster. Engineered automated CI pipelines with GitHub Actions running multi-stage Docker builds published to GitHub Container Registry (GHCR), declarative auto-syncing with ArgoCD from Kustomize overlays, Traefik ingress controller with automated Let's Encrypt TLS (HTTP-01 challenge), and high-availability database storage on isolated AWS RDS PostgreSQL 15. Includes automated PowerShell / AWS CLI cloud cost management scripts for stopping/starting instances and dynamic Route 53 DNS updates.",
+    image: "/images/projects/between-gitops.svg",
+    client: "AWS Cloud (Live Production)",
+    year: "2026",
+    role: "DevOps & Cloud Systems Architect",
+    challenge: "Managing manual Docker deployments across distributed microservices caused configuration drift, downtime during releases, lack of instant rollback, and high ongoing cloud compute costs when idling.",
+    solution: "Built a fully declarative GitOps continuous delivery system with ArgoCD and k3s on AWS EC2, GitHub Actions CI to GHCR, Traefik ingress with automated Let's Encrypt TLS, secure AWS RDS PostgreSQL isolation, and automated one-click cloud cost toggle scripts.",
+    deliverables: [
+      "k3s Kubernetes Cluster on AWS EC2 (Ubuntu 24.04 LTS)",
+      "ArgoCD Continuous Delivery with Declarative Kustomize Overlays",
+      "GitHub Actions CI Pipeline with GHCR Multi-Stage Image Builds",
+      "Traefik Ingress Controller with Automated Let's Encrypt TLS",
+      "AWS RDS PostgreSQL 15 Database with Private Subnet Group Isolation",
+      "Celery Background Task Queue & Redis Cache/Broker Pods",
+      "Route 53 Dynamic DNS Record Sync (between.dakshaws.sryze.cc)",
+      "Automated PowerShell / AWS CLI Cost-Toggle Script (EC2 + RDS Stop/Start)"
+    ],
+    liveUrl: "https://between.dakshaws.sryze.cc",
+    githubUrl: "https://github.com/DakshBhavsar007/Between-GitOPS",
+    featured: true
+  },
   {
     id: "proj-rag",
     title: "Resume RAG Search Engine - Semantic Candidate Retrieval Platform",
