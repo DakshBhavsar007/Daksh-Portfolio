@@ -1,0 +1,119 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ragDarkBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="50%" stop-color="#05080E"/>
+      <stop offset="100%" stop-color="#020306"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0B0F19" stop-opacity="0.95"/>
+    </linearGradient>
+    <pattern id="gridPatternRag" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#ragDarkBg)"/>
+  <rect width="1200" height="675" fill="url(#gridPatternRag)"/>
+  <circle cx="280" cy="240" r="220" fill="#0284C7" fill-opacity="0.12"/>
+  <circle cx="920" cy="400" r="240" fill="#6366F1" fill-opacity="0.1"/>
+
+  <g id="topNav">
+    <rect width="1200" height="68" fill="#0B101A" fill-opacity="0.95" stroke="#1E293B" stroke-width="1"/>
+    <g transform="translate(45, 19)">
+      <rect x="0" y="0" width="30" height="30" rx="8" fill="#0284C7"/>
+      <path d="M 8,15 L 14,9 L 22,9 L 16,15 L 22,21 L 14,21 Z" fill="#FFFFFF"/>
+      <text x="40" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Resume RAG Engine</text>
+      <rect x="220" y="4" width="76" height="22" rx="11" fill="#10B981" fill-opacity="0.18" stroke="#10B981" stroke-width="1"/>
+      <circle cx="232" cy="15" r="3.5" fill="#10B981"/>
+      <text x="242" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" fill="#34D399">AWS LIVE</text>
+    </g>
+    <g transform="translate(860, 20)" font-family="monospace" font-size="12">
+      <rect x="0" y="0" width="295" height="28" rx="6" fill="#111827" stroke="#334155" stroke-width="1"/>
+      <text x="14" y="18" fill="#94A3B8">HOST: <tspan fill="#38BDF8">rag.dakshaws.sryze.cc</tspan></text>
+    </g>
+  </g>
+
+  <g transform="translate(45, 95)">
+    <rect x="0" y="0" width="1110" height="64" rx="12" fill="#0E1524" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="35" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500" fill="#F1F5F9">
+      "Find senior candidates with Python, Docker microservices, and AWS EKS cloud experience"
+    </text>
+    <rect x="965" y="14" width="130" height="36" rx="8" fill="#0284C7"/>
+    <text x="993" y="37" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Execute RAG</text>
+  </g>
+
+  <g transform="translate(45, 180)">
+    <rect x="0" y="0" width="460" height="450" rx="14" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="24" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Real-Time Vector Search Pipeline</text>
+    <text x="24" y="54" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748B">PostgreSQL pgvector cosine distance (&lt;=&gt;) &amp; LangChain LCEL</text>
+
+    <g transform="translate(24, 76)">
+      <rect x="0" y="0" width="412" height="68" rx="8" fill="#131D2E" stroke="#1E293B" stroke-width="1"/>
+      <rect x="12" y="16" width="36" height="36" rx="6" fill="#0284C7" fill-opacity="0.2"/>
+      <text x="25" y="39" font-family="monospace" font-size="14" font-weight="bold" fill="#38BDF8">01</text>
+      <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#F1F5F9">Section-Aware Regex Chunking</text>
+      <text x="60" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">54 domain-coherent chunks • Experience, Skills, Projects</text>
+    </g>
+
+    <g transform="translate(24, 156)">
+      <rect x="0" y="0" width="412" height="68" rx="8" fill="#131D2E" stroke="#1E293B" stroke-width="1"/>
+      <rect x="12" y="16" width="36" height="36" rx="6" fill="#6366F1" fill-opacity="0.2"/>
+      <text x="23" y="39" font-family="monospace" font-size="14" font-weight="bold" fill="#818CF8">02</text>
+      <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#F1F5F9">3072-d Dense Embeddings</text>
+      <text x="60" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">Google models/gemini-embedding-001</text>
+    </g>
+
+    <g transform="translate(24, 236)">
+      <rect x="0" y="0" width="412" height="68" rx="8" fill="#131D2E" stroke="#1E293B" stroke-width="1"/>
+      <rect x="12" y="16" width="36" height="36" rx="6" fill="#10B981" fill-opacity="0.2"/>
+      <text x="23" y="39" font-family="monospace" font-size="14" font-weight="bold" fill="#34D399">03</text>
+      <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#F1F5F9">pgvector Cosine Search (&lt;=&gt;)</text>
+      <text x="60" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">Neon PostgreSQL • 15–40 ms vector query latency</text>
+    </g>
+
+    <g transform="translate(24, 316)">
+      <rect x="0" y="0" width="412" height="68" rx="8" fill="#131D2E" stroke="#1E293B" stroke-width="1"/>
+      <rect x="12" y="16" width="36" height="36" rx="6" fill="#F59E0B" fill-opacity="0.2"/>
+      <text x="23" y="39" font-family="monospace" font-size="14" font-weight="bold" fill="#FBBF24">04</text>
+      <text x="60" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#F1F5F9">Gemini 2.5 Flash Citation Synthesis</text>
+      <text x="60" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">Strict [resume_id: ...] ground truth evidence citations</text>
+    </g>
+
+    <g transform="translate(24, 396)">
+      <rect x="0" y="0" width="412" height="36" rx="6" fill="#0A0F1A" stroke="#1E293B" stroke-width="1"/>
+      <text x="14" y="23" font-family="monospace" font-size="11.5" fill="#94A3B8">PROD METRICS: <tspan fill="#34D399">200 OK</tspan> • Latency: <tspan fill="#38BDF8">13.4s</tspan> • Tokens: <tspan fill="#818CF8">2,950</tspan></text>
+    </g>
+  </g>
+
+  <g transform="translate(530, 180)">
+    <rect x="0" y="0" width="625" height="450" rx="14" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5"/>
+    <g transform="translate(24, 25)">
+      <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Grounded Candidate Evaluation Result</text>
+      <text x="0" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748B">Evidence-backed match with zero ungrounded claims</text>
+
+      <g transform="translate(0, 45)">
+        <rect x="0" y="0" width="577" height="160" rx="10" fill="#0E1626" stroke="#2563EB" stroke-width="1"/>
+        <text x="18" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14.5" font-weight="700" fill="#38BDF8">Alex Morgan — Senior Backend Engineer</text>
+        <rect x="460" y="12" width="102" height="24" rx="12" fill="#10B981" fill-opacity="0.2"/>
+        <text x="473" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#34D399">94% MATCH</text>
+        <text x="18" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">• Proven Python &amp; Docker Microservices:</text>
+        <text x="28" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">"Architected and deployed 12+ containerized microservices using FastAPI and Docker"</text>
+        <text x="28" y="93" font-family="monospace" font-size="10.5" fill="#60A5FA">[resume_id: alex_morgan_backend_python, section: Experience]</text>
+        <text x="18" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">• Cloud Migration &amp; Reliability:</text>
+        <text x="28" y="136" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">Led zero-downtime migration of high-throughput APIs to AWS ECS and RDS PostgreSQL</text>
+      </g>
+
+      <g transform="translate(0, 220)">
+        <rect x="0" y="0" width="577" height="150" rx="10" fill="#0E1626" stroke="#1E293B" stroke-width="1"/>
+        <text x="18" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14.5" font-weight="700" fill="#818CF8">Sarah Jenkins — Senior Cloud &amp; DevOps Engineer</text>
+        <rect x="460" y="12" width="102" height="24" rx="12" fill="#3B82F6" fill-opacity="0.2"/>
+        <text x="473" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#60A5FA">89% MATCH</text>
+        <text x="18" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">• Multi-Cluster Kubernetes &amp; AWS Infrastructure:</text>
+        <text x="28" y="75" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11.5" fill="#94A3B8">"Architected multi-cluster Kubernetes (AWS EKS) infrastructure managed via GitOps and Helm"</text>
+        <text x="28" y="93" font-family="monospace" font-size="10.5" fill="#60A5FA">[resume_id: sarah_jenkins_devops_cloud, section: Experience]</text>
+      </g>
+    </g>
+  </g>
+</svg>

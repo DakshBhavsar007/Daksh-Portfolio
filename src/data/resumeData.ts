@@ -58,6 +58,19 @@ export const resumesData: ResumeRole[] = [
     ],
     experienceOrProjects: [
       {
+        title: "Resume RAG Search Engine - Semantic Candidate Retrieval Platform",
+        subtitle: "Production RAG Pipeline & AWS EC2 Deployment",
+        type: "project",
+        liveUrl: "https://rag.dakshaws.sryze.cc/docs",
+        githubUrl: "https://github.com/DakshBhavsar007/Resume-RAG-Search",
+        points: [
+          "Architected an end-to-end RAG candidate search platform in Python, combining regex section-aware chunking with 3,072-dimensional Gemini embeddings and PostgreSQL (pgvector) cosine similarity (<=>).",
+          "Engineered custom LangChain BaseRetriever and LCEL orchestration with Gemini 2.5 Flash, enforcing citation-grounded [resume_id: ...] constraints to eliminate unsupported claims.",
+          "Containerized with Docker and deployed live on AWS EC2 (Ubuntu) behind an Nginx reverse proxy (120s timeout), Elastic IP, Route 53 DNS, and automated Let's Encrypt SSL at rag.dakshaws.sryze.cc."
+        ],
+        techStack: "Python, FastAPI, LangChain (LCEL), PostgreSQL (pgvector), Gemini API, Docker, AWS EC2, Nginx, Route 53"
+      },
+      {
         title: "Between — AI-Powered Recruitment & Resume Platform",
         subtitle: "Production Deployment",
         type: "project",
@@ -133,6 +146,19 @@ export const resumesData: ResumeRole[] = [
       }
     ],
     experienceOrProjects: [
+      {
+        title: "Resume RAG Search Engine - Semantic Vector Search API",
+        subtitle: "High-Dimensional Vector Search & LCEL Pipeline",
+        type: "project",
+        liveUrl: "https://rag.dakshaws.sryze.cc/docs",
+        githubUrl: "https://github.com/DakshBhavsar007/Resume-RAG-Search",
+        points: [
+          "Implemented high-dimensional semantic vector search over PostgreSQL with pgvector cosine distance (<=>), executing similarity lookups in 15-40ms on external Neon cloud storage.",
+          "Subclassed LangChain BaseRetriever (_get_relevant_documents) to output structured Document objects, integrated into an LCEL pipeline with automated HTTP 429 API key failover rotation.",
+          "Built FastAPI REST endpoints (/health, /query) with high-resolution latency tracking (time.perf_counter()), token usage observability, and automated credential sanitization."
+        ],
+        techStack: "FastAPI, Python, LangChain, PostgreSQL (pgvector), Uvicorn, Pydantic v2, Neon DB"
+      },
       {
         title: "Between — AI-Powered Recruitment & Resume Platform",
         subtitle: "Backend & Distributed LLM Pipelines",
@@ -304,6 +330,19 @@ export const resumesData: ResumeRole[] = [
     ],
     experienceOrProjects: [
       {
+        title: "Resume RAG Search Engine - AWS Cloud & Container Deployment",
+        subtitle: "AWS EC2, Elastic IP, Route 53, Nginx & Let's Encrypt",
+        type: "project",
+        liveUrl: "https://rag.dakshaws.sryze.cc/docs",
+        githubUrl: "https://github.com/DakshBhavsar007/Resume-RAG-Search",
+        points: [
+          "Provisioned and hardened AWS EC2 Ubuntu instance with least-privilege Security Groups (closed port 8000, public 80/443, restricted SSH 22) and permanent Elastic IP routing.",
+          "Configured Nginx reverse proxy with proxy_read_timeout 120s to buffer unstreamed LLM generation, automated Let's Encrypt TLS certificates, and mapped custom domain via Route 53.",
+          "Packaged application in lightweight Docker (Python 3.11-slim) with --restart unless-stopped and runtime environment secret injection (.env), bound internally to 127.0.0.1:8000."
+        ],
+        techStack: "AWS EC2, Docker, Nginx, Route 53, Let's Encrypt SSL, Linux (Ubuntu), Elastic IP, Uvicorn"
+      },
+      {
         title: "Between — AI Recruitment & Resume Platform (Production)",
         subtitle: "Production Infrastructure & Async Workers",
         type: "experience",
@@ -365,6 +404,19 @@ export const resumesData: ResumeRole[] = [
       }
     ],
     experienceOrProjects: [
+      {
+        title: "Resume RAG Search Engine - Python AI & Vector Search Engine",
+        subtitle: "LangChain LCEL, Section Chunker & Gemini 2.5 Flash",
+        type: "project",
+        liveUrl: "https://rag.dakshaws.sryze.cc/docs",
+        githubUrl: "https://github.com/DakshBhavsar007/Resume-RAG-Search",
+        points: [
+          "Developed section-aware regex chunker partitioning technical resumes by canonical headings (Skills, Experience, Projects) to preserve semantic coherence across 54 indexed chunks.",
+          "Built custom PgVectorResumeRetriever(BaseRetriever) and LangChain LCEL pipeline with Google Gemini 2.5 Flash, returning structured candidate evaluations with [resume_id: ...] citations.",
+          "Executed automated 10-query benchmark suite, logging retrieval accuracy, latency profiles (avg ~23.7s), and qualitative edge cases across multiple technical disciplines."
+        ],
+        techStack: "Python 3.11, FastAPI, LangChain, psycopg2, pgvector, Google GenAI SDK, Pydantic"
+      },
       {
         title: "Between — AI-Powered Recruitment & Resume Platform",
         subtitle: "Django & Python Async Automation",

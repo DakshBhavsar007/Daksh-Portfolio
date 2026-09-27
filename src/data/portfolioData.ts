@@ -58,9 +58,9 @@ export const clientLogos: ClientLogo[] = [
 
 export const statistics: StatItem[] = [
   {
-    value: "04+",
+    value: "05+",
     label: "Production Platforms Built",
-    sublabel: "Between, SevaSetu, StudyVerse, and TestVerse engineered from concept to live deployment."
+    sublabel: "Resume RAG Engine, Between, SevaSetu, StudyVerse, and TestVerse engineered from concept to live deployment."
   },
   {
     value: "8.28",
@@ -101,6 +101,21 @@ export const services: ServiceItem[] = [
 ];
 
 export const experiences: ExperienceItem[] = [
+  {
+    id: "exp-rag",
+    role: "RAG & Cloud Systems Creator",
+    company: "Resume RAG Search Engine",
+    description: "Architected and shipped an end-to-end RAG candidate search platform on AWS EC2 with pgvector, LangChain LCEL, and Let's Encrypt SSL.",
+    period: "Live",
+    location: "AWS Cloud (ap-south-1)",
+    highlights: [
+      "Built section-aware regex chunking and 3072-d dense vector search via pgvector cosine distance (<=>)",
+      "Orchestrated custom LangChain BaseRetriever with LCEL pipeline and strict citation-grounded prompting",
+      "Containerized with Docker and deployed live on AWS EC2 behind Nginx reverse proxy with Elastic IP and Route 53",
+      "Conducted automated 10-query benchmark logging retrieval precision, latency profiles, and edge-case caveats"
+    ],
+    skills: ["Python", "FastAPI", "LangChain", "PostgreSQL", "pgvector", "Gemini 2.5", "Docker", "AWS EC2", "Nginx", "Route 53"]
+  },
   {
     id: "exp-edu",
     role: "B.E. Computer Engineering (Semester 5)",
@@ -162,6 +177,34 @@ export const experiences: ExperienceItem[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    id: "proj-rag",
+    title: "Resume RAG Search Engine - Semantic Candidate Retrieval Platform",
+    category: "AI & SaaS",
+    tags: ["FastAPI", "LangChain", "pgvector", "AWS EC2", "Docker", "Gemini API"],
+    description: "Architected an end-to-end RAG candidate search engine indexing technical resumes with section-aware chunking, 3072-d pgvector cosine similarity, and citation-grounded evaluations.",
+    longDescription: "Architected and shipped an end-to-end RAG candidate retrieval engine in Python. Replaced naive token slicing with a regex-based section-aware chunker, stored 3072-dimensional Gemini embeddings in Neon PostgreSQL with pgvector cosine distance (<=>), and orchestrated retrieval with a custom LangChain BaseRetriever and LCEL chain. Evaluated against a 10-query benchmark and deployed live on AWS EC2 behind Nginx with Let's Encrypt SSL.",
+    image: "/images/projects/resume-rag.svg",
+    client: "AWS Production (Live)",
+    year: "2026",
+    role: "AI & Cloud Systems Architect",
+    challenge: "Traditional keyword-based ATS screening fails on semantic intent, synonyms, and cross-functional role matching, while ungrounded LLMs produce hallucinated qualifications without citations.",
+    solution: "Engineered section-aware chunking with 3072-d vector similarity in pgvector, custom LangChain BaseRetriever with LCEL orchestration, strict [resume_id: ...] citation grounding, and an automated 10-query benchmark, containerized and deployed on AWS EC2.",
+    deliverables: [
+      "FastAPI REST API with /health and /query",
+      "Section-Aware Regex Chunking Pipeline",
+      "3072-d Embeddings (models/gemini-embedding-001)",
+      "PostgreSQL + pgvector Cosine Search (<=>)",
+      "Custom PgVectorResumeRetriever(BaseRetriever)",
+      "LangChain LCEL Citation-Grounded Chain",
+      "Automated 10-Query Evaluation Benchmark",
+      "AWS EC2 + Elastic IP + Route 53 + Let's Encrypt SSL",
+      "Docker Containerization & Nginx Reverse Proxy"
+    ],
+    liveUrl: "https://rag.dakshaws.sryze.cc/docs",
+    githubUrl: "https://github.com/DakshBhavsar007/Resume-RAG-Search",
+    featured: true
+  },
   {
     id: "proj-1",
     title: "Between — AI-Powered Recruitment & Resume Platform",
